@@ -51,3 +51,9 @@ process processo_sensores(void) {
     return OK;
 }
 
+int main(void) {
+  resume(create(processo_esteira, 1024, 20, "esteira", 0));
+  resume(create(processo_sensores, 1024, 20, "sensores", 0));
+
+  return OK;
+}
