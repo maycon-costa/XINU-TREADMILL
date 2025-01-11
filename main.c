@@ -43,3 +43,11 @@ process processo_esteira(void) {
     }
     return OK;
 }
+process processo_sensores(void) {
+    while (TRUE) {
+        monitorar_sensores();
+        sleepms(100);  
+    }
+    return OK;
+}
+
