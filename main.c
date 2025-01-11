@@ -9,3 +9,10 @@
 
 #define TRUE 1
 #define FALSE 0
+
+int em_movimento = FALSE;
+
+void iniciar_esteira(void) {
+  kprintf("Iniciando a esteira.\n");
+  em_movimento = TRUE;
+}
