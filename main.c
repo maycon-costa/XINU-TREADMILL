@@ -21,3 +21,14 @@ void parar_esteira(void) {
   kprintf("Parando a esteira.\n");
   em_movimento = FALSE;
 }
+void monitorar_sensores(void) {
+   int sensor_inicio_ativado = (rand() % 10) == 0;
+   int sensor_fim_ativado = (rand() % 20) == 0;
+
+   if (sensor_inicio_ativado) {
+        iniciar_esteira();
+   }
+   if (sensor_fim_ativado) {
+        parar_esteira();
+   }
+}
