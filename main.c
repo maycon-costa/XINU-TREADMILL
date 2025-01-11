@@ -16,3 +16,8 @@ void iniciar_esteira(void) {
   kprintf("Iniciando a esteira.\n");
   em_movimento = TRUE;
 }
+
+void parar_esteira(void) {
+  kprintf("Parando a esteira.\n");
+  em_movimento = FALSE;
+}
