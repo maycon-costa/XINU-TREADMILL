@@ -32,3 +32,14 @@ void monitorar_sensores(void) {
         parar_esteira();
    }
 }
+process processo_esteira(void) {
+   while (TRUE) {
+     if (em_movimento) {
+          kprintf("Esteira em movimento...\n");
+     } else {
+          kprintf("Esteira parada.\n");
+       }
+        sleepms(ATRASO);  
+    }
+    return OK;
+}
